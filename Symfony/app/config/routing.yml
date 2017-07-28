@@ -1,0 +1,33 @@
+cc_create_user:
+    resource: "@CCCreateUserBundle/Resources/config/routing.yml"
+    prefix:   /create
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+comment:
+    path: /comment/{id}
+    defaults: { _controller: AdminBundle:Default:comment} 
+
+app:
+    resource: '@AppBundle/Controller/'
+    prefix:   /
+    type: annotation
+    
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+rest_api_all_project:
+    path:     api/allProject
+    defaults: { _controller: AdminBundle:Project:all }
+
+rest_api_one_project:
+    path:     api/project/{id}
+    defaults: { _controller: AdminBundle:Project:oneProject }
+    requirements:
+        id: '\d+'
+
+rest_api_current_user:
+    path:     api/user
+    defaults: { _controller: AppBundle:Default:apiCurrentUser }

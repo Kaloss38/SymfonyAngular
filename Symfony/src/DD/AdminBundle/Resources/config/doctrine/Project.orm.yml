@@ -1,0 +1,33 @@
+DD\AdminBundle\Entity\Project:
+    type: entity
+    table: null
+    repositoryClass: DD\AdminBundle\Repository\ProjectRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        autor:
+            type: string
+            length: 255
+        content:
+            type: text
+            nullable: true
+        date:
+            type: datetime
+    oneToMany:
+        notes:
+            targetEntity: Note
+            mappedBy: project
+        users:
+            targetEntity: \AppBundle\Entity\User
+            mappedBy: project
+        comments:
+            targetEntity: Comment
+            mappedBy: project    
+    lifecycleCallbacks: {  }

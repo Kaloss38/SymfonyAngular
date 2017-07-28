@@ -1,0 +1,8 @@
+<app-menu></app-menu>
+  <div>
+    <h2>Projets :</h2>
+    <ul>
+      <li *ngFor="let project of projects" ><a [routerLink]="['/project', project.id]">Auteur : {{ project.autor }} - Titre : {{ project.titre }}</a></li>
+    </ul>
+  </div>
+{{projects | json }}

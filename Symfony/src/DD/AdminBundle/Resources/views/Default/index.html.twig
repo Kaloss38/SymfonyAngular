@@ -1,0 +1,34 @@
+{# src/OC/PlatformBundle/Resources/views/Advert/index.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} Administrateur{% endblock %}
+
+{% block body %}
+<div class="container">
+	<div class="main_bloc">
+
+		{% for project in projects %}
+			<ul>
+				<li> {{ project.id }} </li>
+				<li> {{ project.content }} </li>
+				<li> {{ project.titre }} </li>
+				<li> {{ project.autor }} </li>
+				<li> {{ project.content }} </li>
+
+			</ul>
+			
+			<button><a href="/comment/{{project.id}}">Rédiger un commentaire</a></button>
+			<!-- Tous les commentaires dans les commentaire de project -->
+			{% for comment in  project.comments %}
+				<p>Comment : {{ comment.id }} - {{ comment.content }}</p>		
+			{% endfor %}
+			<hr>	
+		{% endfor %}
+	</div>
+	
+</div>
+	<div class="main_bloc">
+
+	</div>
+{% endblock %}

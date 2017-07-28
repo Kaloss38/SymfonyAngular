@@ -1,0 +1,87 @@
+html, body {
+    background-color: #ffcc00;
+}
+
+h1 {
+	color: #231900;
+	font-family: 'Open Sans';
+	font-size: 94px;
+	font-weight: 800;
+	letter-spacing: -2px;
+	line-height: 84px;
+	margin-bottom: 72px;
+	text-transform: uppercase;
+}
+
+p {
+	color: #231900;
+	font-family: 'Crimson Text';
+	font-size: 34px;
+	font-weight: 500;
+	line-height: 48px;
+	margin-bottom: 48px;
+	max-width: 650px;
+}
+
+a {
+	color: #231900;	
+}
+
+a:hover {
+	
+	background-color: #ffcc00;
+}
+
+.navigation {
+  list-style: none;
+  margin: 0; 
+  
+  background: deepskyblue;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.navigation a {
+	font-family: 'Open Sans';
+	text-decoration: none;
+	display: block;
+	padding: 1em;
+	color: white;
+}
+
+.navigation a:hover {
+  background: darken(deepskyblue, 2%);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}

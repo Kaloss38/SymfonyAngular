@@ -1,0 +1,4 @@
+services:
+    app.message_generator: #Nom du service
+        class: CC\CreateUserBundle\Services\MessageGenerator #Son emplacement
+        arguments: [] # Tableau d'arguments

@@ -1,0 +1,28 @@
+DD\AdminBundle\Entity\Comment:
+    type: entity
+    table: null
+    repositoryClass: DD\AdminBundle\Repository\CommentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        content:
+            type: string
+            length: '255'
+    manyToOne:
+        user: 
+            targetEntity: \AppBundle\Entity\User
+            inversedBy: comments
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+        project:
+            targetEntity: Project
+            inversedBy: comments
+            joinColumn:
+                name: project_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

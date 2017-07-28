@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />         
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+        {% block style %}{% endblock style %}
+    </head>
+    <body>
+        <div>
+            {% block fos_user_content %}
+            {% endblock fos_user_content %}
+        </div>
+    </body>
+</html>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" 
+    crossorigin="anonymous"></script>
+    <script src="{{ asset('js/index.js') }}"></script>
+    {% block script %}{% endblock script %}
+</html>

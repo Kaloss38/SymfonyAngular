@@ -1,0 +1,33 @@
+DD\AdminBundle\Entity\Note:
+    type: entity
+    table: null
+    repositoryClass: DD\AdminBundle\Repository\NoteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        autor:
+            type: string
+            length: 255
+        content:
+            type: string
+            length: 255
+        date:
+            type: datetime
+    manyToOne:
+        project:
+            targetEntity: Project
+            inversedBy: notes
+            joinColumn:
+                name: project_id
+                referencedColumnName: id
+        user:
+            targetEntity: \AppBundle\Entity\User
+            inversedBy: notes
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

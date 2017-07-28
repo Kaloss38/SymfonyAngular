@@ -1,0 +1,4 @@
+    <button (click)="show = !show">{{show ? 'Masquer les notes' : 'Afficher les notes'}}</button>
+    show = {{show}}
+    <br>
+    <div *ngIf="show">Text to show</div>

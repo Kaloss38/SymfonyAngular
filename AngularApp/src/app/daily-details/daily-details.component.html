@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<header>
+    <h2 class="page-title">Détail du project</h2>
+</header>
+
+<!--<p class="note">Ceci est un test aogaoingfoaigfoanfroiun</p>-->
+
+<div  class="container">
+  <div *ngFor="let detail of details">
+    <div appChangeColor *ngIf="detail.date" class="note">
+        <h2>Note # {{ detail.id }} par : {{ detail.autor }}</h2>
+        
+        <p>{{ detail.content }}</p>
+        <p class="date">Posté le {{ detail.date.date | date }}</p>
+        <app-btn-del-note></app-btn-del-note>
+
+    </div>
+    <div *ngIf="detail.project" class="projet">
+      <h2>Project # {{ detail.project.id }} - {{ detail.project.titre }}</h2>
+        <h3>Auteur : {{ detail.project.autor }}</h3>
+        <p>{{ detail.project.content }} </p>
+        <p class="date"> Posté le {{ detail.project.date.date | date }}</p>       
+    </div>
+  </div>
+</div>
+{{ details | json }}

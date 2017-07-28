@@ -1,0 +1,50 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends "base.html.twig" %}
+{% block style %}
+{% endblock style %}
+{% block body %}
+    
+<div class="panda">
+        <div class="ear"></div>
+        <div class="face">
+            <div class="eye-shade"></div>
+            <div class="eye-white">
+                <div class="eye-ball"></div>
+            </div>
+            <div class="eye-shade rgt"></div>
+            <div class="eye-white rgt">
+                <div class="eye-ball"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="body"> </div>
+        <div>
+            <div class="finger"></div>
+        </div>
+        <div>
+            <div class="finger"></div>
+        </div>
+    </div>
+    <form name="fos_user_registration_form" method="post" action="/register/" class="main-title">
+        
+        <div class="hand"></div>
+        <div class="hand rgt"></div>
+        <h1>ValidateAIAnJuJo Register</h1>
+        <div class="form-group">
+          {{ form_widget(form.username, {'attr' : { 'placeholder' : "Nom d'utilisateur", 'class': 'form-control' }}) }}
+          {{ form_widget(form.email, {'attr' : { 'placeholder' : "Mail", 'class': 'form-control' }}) }}
+          {{ form_widget(form.plainPassword.first, {'attr' : { 'placeholder' : "Mot de passe", 'class': 'form-control' }}) }}
+          {{ form_widget(form.plainPassword.second, {'attr' : { 'placeholder' : "Confirmation du mot de passe", 'class': 'form-control' }}) }}
+          {{ form_rest(form) }}             
+          
+      
+            <p class="alert">Invalid Credentials..!!</p>
+            <button type="submit" id="_submit" name="_submit" class="btn">Add New User</button>
+        </div>
+    </form>
+<!-- Related demos -->                       
+</div><!-- /container -->
+{% endblock %}
+{% block script %}
+{% endblock script %}

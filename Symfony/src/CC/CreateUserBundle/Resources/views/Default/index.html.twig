@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ parent() }} Administrateur{% endblock %}
+
+{% block body %}
+	<div class="container-form">
+		<div class="content_form">
+			{{ form(form) }}
+		
+			{{ message }}
+			
+			
+		</div>
+	</div>
+	<button class="button_form"> Afficher les canvas </button>
+	<div class="canvas_container">
+		<canvas id="nouveau_canvas" width="200" height="100" style="border:5px solid #000000;"></canvas>
+		<canvas id="canvas_one" width="200" height="100" style="border:5px solid #000000;"></canvas>
+		<canvas id="canvas_two" width="200" height="100" style="border:5px solid #000000;"></canvas>
+	</div>
+	
+	
+{% endblock %}

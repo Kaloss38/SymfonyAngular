@@ -1,0 +1,91 @@
+div {
+  width: 100vw;
+  margin: 30px;
+}
+
+h2, h3 {
+  font: 400 40px/1.5 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #231900;
+}
+
+h3 {
+ font-size: 1.5em;
+}
+
+.container {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.note {
+    background-color: #ffcc06;
+    padding:1em;
+    width:390px;
+}
+
+.note h2 {
+    font-size: 1.5em;
+}
+
+div {
+    width:auto;
+    margin:0.5em;
+}
+
+.date {
+    font-size: 1em;
+    color: white;
+    background-color: #231900;
+    padding: 0.5em;
+}
+
+p {
+  font: 200 20px/1.5 sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font: 200 20px/1.5 sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #231900;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+}
+
+li a:hover {
+  font-size: 30px;
+  background: #ffcc06;
+}
+
+header {
+    text-align: center;
+    margin: 2em;
+}
+
